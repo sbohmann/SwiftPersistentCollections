@@ -7,14 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96040DA72042A0A0006832E0 /* SwiftPersistentCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 96040DA62042A0A0006832E0 /* SwiftPersistentCollections.h */; };
-		96040DA92042A0A0006832E0 /* SwiftPersistentCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 96040DA82042A0A0006832E0 /* SwiftPersistentCollections.m */; };
+		96040DCD2042A10C006832E0 /* MapIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB12042A10B006832E0 /* MapIterator.swift */; };
+		96040DCE2042A10C006832E0 /* PHMEntryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB22042A10B006832E0 /* PHMEntryNode.swift */; };
+		96040DCF2042A10C006832E0 /* PHMMultiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB32042A10B006832E0 /* PHMMultiNode.swift */; };
+		96040DD02042A10C006832E0 /* PHMNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB42042A10B006832E0 /* PHMNode.swift */; };
+		96040DD12042A10C006832E0 /* PHMTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB52042A10B006832E0 /* PHMTreeNode.swift */; };
+		96040DD22042A10C006832E0 /* PersistentHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB62042A10B006832E0 /* PersistentHashMap.swift */; };
+		96040DD32042A10C006832E0 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB82042A10B006832E0 /* Common.swift */; };
+		96040DD42042A10C006832E0 /* PHSEntryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DBB2042A10C006832E0 /* PHSEntryNode.swift */; };
+		96040DD52042A10C006832E0 /* PHSMultiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DBC2042A10C006832E0 /* PHSMultiNode.swift */; };
+		96040DD62042A10C006832E0 /* PHSNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DBD2042A10C006832E0 /* PHSNode.swift */; };
+		96040DD72042A10C006832E0 /* PHSTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DBE2042A10C006832E0 /* PHSTreeNode.swift */; };
+		96040DD82042A10C006832E0 /* PersistentHashSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DBF2042A10C006832E0 /* PersistentHashSet.swift */; };
+		96040DD92042A10C006832E0 /* SetIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC02042A10C006832E0 /* SetIterator.swift */; };
+		96040DDA2042A10C006832E0 /* PVNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC22042A10C006832E0 /* PVNode.swift */; };
+		96040DDB2042A10C006832E0 /* PVTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC32042A10C006832E0 /* PVTreeNode.swift */; };
+		96040DDC2042A10C006832E0 /* PVValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC42042A10C006832E0 /* PVValueNode.swift */; };
+		96040DDD2042A10C006832E0 /* PersistentVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC52042A10C006832E0 /* PersistentVector.swift */; };
+		96040DDE2042A10C006832E0 /* VectorIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC62042A10C006832E0 /* VectorIterator.swift */; };
+		96040E132042AC0C006832E0 /* libSwiftPersistentCollections.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 96040DA32042A0A0006832E0 /* libSwiftPersistentCollections.dylib */; };
+		96040E1C2042AC15006832E0 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DCC2042A10C006832E0 /* TestCommon.swift */; };
+		96040E1E2042AC90006832E0 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DB82042A10B006832E0 /* Common.swift */; };
+		96040E1F2042ACA7006832E0 /* PersistentHashMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DC92042A10C006832E0 /* PersistentHashMapTest.swift */; };
+		96040E202042AF1E006832E0 /* PersistentHashSetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DCA2042A10C006832E0 /* PersistentHashSetTest.swift */; };
+		96040E212042AF1E006832E0 /* PersistentVectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96040DCB2042A10C006832E0 /* PersistentVectorTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96040E142042AC0C006832E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96040D9B2042A0A0006832E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96040DA22042A0A0006832E0;
+			remoteInfo = SwiftPersistentCollections;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		96040DA32042A0A0006832E0 /* libSwiftPersistentCollections.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSwiftPersistentCollections.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		96040DA62042A0A0006832E0 /* SwiftPersistentCollections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftPersistentCollections.h; sourceTree = "<group>"; };
-		96040DA82042A0A0006832E0 /* SwiftPersistentCollections.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftPersistentCollections.m; sourceTree = "<group>"; };
+		96040DB12042A10B006832E0 /* MapIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapIterator.swift; sourceTree = "<group>"; };
+		96040DB22042A10B006832E0 /* PHMEntryNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHMEntryNode.swift; sourceTree = "<group>"; };
+		96040DB32042A10B006832E0 /* PHMMultiNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHMMultiNode.swift; sourceTree = "<group>"; };
+		96040DB42042A10B006832E0 /* PHMNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHMNode.swift; sourceTree = "<group>"; };
+		96040DB52042A10B006832E0 /* PHMTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHMTreeNode.swift; sourceTree = "<group>"; };
+		96040DB62042A10B006832E0 /* PersistentHashMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHashMap.swift; sourceTree = "<group>"; };
+		96040DB82042A10B006832E0 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		96040DB92042A10C006832E0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		96040DBB2042A10C006832E0 /* PHSEntryNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHSEntryNode.swift; sourceTree = "<group>"; };
+		96040DBC2042A10C006832E0 /* PHSMultiNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHSMultiNode.swift; sourceTree = "<group>"; };
+		96040DBD2042A10C006832E0 /* PHSNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHSNode.swift; sourceTree = "<group>"; };
+		96040DBE2042A10C006832E0 /* PHSTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHSTreeNode.swift; sourceTree = "<group>"; };
+		96040DBF2042A10C006832E0 /* PersistentHashSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHashSet.swift; sourceTree = "<group>"; };
+		96040DC02042A10C006832E0 /* SetIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetIterator.swift; sourceTree = "<group>"; };
+		96040DC22042A10C006832E0 /* PVNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVNode.swift; sourceTree = "<group>"; };
+		96040DC32042A10C006832E0 /* PVTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVTreeNode.swift; sourceTree = "<group>"; };
+		96040DC42042A10C006832E0 /* PVValueNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVValueNode.swift; sourceTree = "<group>"; };
+		96040DC52042A10C006832E0 /* PersistentVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentVector.swift; sourceTree = "<group>"; };
+		96040DC62042A10C006832E0 /* VectorIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorIterator.swift; sourceTree = "<group>"; };
+		96040DC82042A10C006832E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96040DC92042A10C006832E0 /* PersistentHashMapTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHashMapTest.swift; sourceTree = "<group>"; };
+		96040DCA2042A10C006832E0 /* PersistentHashSetTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentHashSetTest.swift; sourceTree = "<group>"; };
+		96040DCB2042A10C006832E0 /* PersistentVectorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentVectorTest.swift; sourceTree = "<group>"; };
+		96040DCC2042A10C006832E0 /* TestCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCommon.swift; sourceTree = "<group>"; };
+		96040E0E2042AC0C006832E0 /* SwiftPersistentCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPersistentCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,14 +80,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96040E0B2042AC0C006832E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96040E132042AC0C006832E0 /* libSwiftPersistentCollections.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		96040D9A2042A0A0006832E0 = {
 			isa = PBXGroup;
 			children = (
-				96040DA52042A0A0006832E0 /* SwiftPersistentCollections */,
+				96040DB72042A10B006832E0 /* Collections */,
+				96040DC72042A10C006832E0 /* CollectionTests */,
+				96040DB92042A10C006832E0 /* LICENSE */,
+				96040DB02042A10B006832E0 /* PersistentHashMap */,
+				96040DBA2042A10C006832E0 /* PersistentHashSet */,
+				96040DC12042A10C006832E0 /* PersistentVector */,
 				96040DA42042A0A0006832E0 /* Products */,
+				96040DF72042A664006832E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -40,17 +109,74 @@
 			isa = PBXGroup;
 			children = (
 				96040DA32042A0A0006832E0 /* libSwiftPersistentCollections.dylib */,
+				96040E0E2042AC0C006832E0 /* SwiftPersistentCollectionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96040DA52042A0A0006832E0 /* SwiftPersistentCollections */ = {
+		96040DB02042A10B006832E0 /* PersistentHashMap */ = {
 			isa = PBXGroup;
 			children = (
-				96040DA62042A0A0006832E0 /* SwiftPersistentCollections.h */,
-				96040DA82042A0A0006832E0 /* SwiftPersistentCollections.m */,
+				96040DB12042A10B006832E0 /* MapIterator.swift */,
+				96040DB22042A10B006832E0 /* PHMEntryNode.swift */,
+				96040DB32042A10B006832E0 /* PHMMultiNode.swift */,
+				96040DB42042A10B006832E0 /* PHMNode.swift */,
+				96040DB52042A10B006832E0 /* PHMTreeNode.swift */,
+				96040DB62042A10B006832E0 /* PersistentHashMap.swift */,
 			);
-			path = SwiftPersistentCollections;
+			path = PersistentHashMap;
+			sourceTree = "<group>";
+		};
+		96040DB72042A10B006832E0 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				96040DB82042A10B006832E0 /* Common.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		96040DBA2042A10C006832E0 /* PersistentHashSet */ = {
+			isa = PBXGroup;
+			children = (
+				96040DBB2042A10C006832E0 /* PHSEntryNode.swift */,
+				96040DBC2042A10C006832E0 /* PHSMultiNode.swift */,
+				96040DBD2042A10C006832E0 /* PHSNode.swift */,
+				96040DBE2042A10C006832E0 /* PHSTreeNode.swift */,
+				96040DBF2042A10C006832E0 /* PersistentHashSet.swift */,
+				96040DC02042A10C006832E0 /* SetIterator.swift */,
+			);
+			path = PersistentHashSet;
+			sourceTree = "<group>";
+		};
+		96040DC12042A10C006832E0 /* PersistentVector */ = {
+			isa = PBXGroup;
+			children = (
+				96040DC22042A10C006832E0 /* PVNode.swift */,
+				96040DC32042A10C006832E0 /* PVTreeNode.swift */,
+				96040DC42042A10C006832E0 /* PVValueNode.swift */,
+				96040DC52042A10C006832E0 /* PersistentVector.swift */,
+				96040DC62042A10C006832E0 /* VectorIterator.swift */,
+			);
+			path = PersistentVector;
+			sourceTree = "<group>";
+		};
+		96040DC72042A10C006832E0 /* CollectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				96040DC82042A10C006832E0 /* Info.plist */,
+				96040DC92042A10C006832E0 /* PersistentHashMapTest.swift */,
+				96040DCA2042A10C006832E0 /* PersistentHashSetTest.swift */,
+				96040DCB2042A10C006832E0 /* PersistentVectorTest.swift */,
+				96040DCC2042A10C006832E0 /* TestCommon.swift */,
+			);
+			path = CollectionTests;
+			sourceTree = "<group>";
+		};
+		96040DF72042A664006832E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,7 +186,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96040DA72042A0A0006832E0 /* SwiftPersistentCollections.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +209,39 @@
 			productReference = 96040DA32042A0A0006832E0 /* libSwiftPersistentCollections.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		96040E0D2042AC0C006832E0 /* SwiftPersistentCollectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96040E162042AC0C006832E0 /* Build configuration list for PBXNativeTarget "SwiftPersistentCollectionTests" */;
+			buildPhases = (
+				96040E0A2042AC0C006832E0 /* Sources */,
+				96040E0B2042AC0C006832E0 /* Frameworks */,
+				96040E0C2042AC0C006832E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96040E152042AC0C006832E0 /* PBXTargetDependency */,
+			);
+			name = SwiftPersistentCollectionTests;
+			productName = SwiftPersistentCollectionTests;
+			productReference = 96040E0E2042AC0C006832E0 /* SwiftPersistentCollectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		96040D9B2042A0A0006832E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Sebastian Bohmann";
 				TargetAttributes = {
 					96040DA22042A0A0006832E0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					96040E0D2042AC0C006832E0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -112,20 +260,68 @@
 			projectRoot = "";
 			targets = (
 				96040DA22042A0A0006832E0 /* SwiftPersistentCollections */,
+				96040E0D2042AC0C006832E0 /* SwiftPersistentCollectionTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96040E0C2042AC0C006832E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96040D9F2042A0A0006832E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96040DA92042A0A0006832E0 /* SwiftPersistentCollections.m in Sources */,
+				96040DD72042A10C006832E0 /* PHSTreeNode.swift in Sources */,
+				96040DD42042A10C006832E0 /* PHSEntryNode.swift in Sources */,
+				96040DD92042A10C006832E0 /* SetIterator.swift in Sources */,
+				96040DDB2042A10C006832E0 /* PVTreeNode.swift in Sources */,
+				96040DD52042A10C006832E0 /* PHSMultiNode.swift in Sources */,
+				96040DDC2042A10C006832E0 /* PVValueNode.swift in Sources */,
+				96040DCF2042A10C006832E0 /* PHMMultiNode.swift in Sources */,
+				96040DCE2042A10C006832E0 /* PHMEntryNode.swift in Sources */,
+				96040DCD2042A10C006832E0 /* MapIterator.swift in Sources */,
+				96040DDA2042A10C006832E0 /* PVNode.swift in Sources */,
+				96040DDE2042A10C006832E0 /* VectorIterator.swift in Sources */,
+				96040DD22042A10C006832E0 /* PersistentHashMap.swift in Sources */,
+				96040DD82042A10C006832E0 /* PersistentHashSet.swift in Sources */,
+				96040DD12042A10C006832E0 /* PHMTreeNode.swift in Sources */,
+				96040DD02042A10C006832E0 /* PHMNode.swift in Sources */,
+				96040DD32042A10C006832E0 /* Common.swift in Sources */,
+				96040DDD2042A10C006832E0 /* PersistentVector.swift in Sources */,
+				96040DD62042A10C006832E0 /* PHSNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96040E0A2042AC0C006832E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96040E1C2042AC15006832E0 /* TestCommon.swift in Sources */,
+				96040E1F2042ACA7006832E0 /* PersistentHashMapTest.swift in Sources */,
+				96040E1E2042AC90006832E0 /* Common.swift in Sources */,
+				96040E202042AF1E006832E0 /* PersistentHashSetTest.swift in Sources */,
+				96040E212042AF1E006832E0 /* PersistentVectorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96040E152042AC0C006832E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96040DA22042A0A0006832E0 /* SwiftPersistentCollections */;
+			targetProxy = 96040E142042AC0C006832E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		96040DAA2042A0A0006832E0 /* Debug */ = {
@@ -180,6 +376,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -228,6 +425,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -240,6 +438,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 			};
 			name = Debug;
 		};
@@ -252,6 +451,38 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+			};
+			name = Release;
+		};
+		96040E172042AC0C006832E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 327TCYU8D4;
+				INFOPLIST_FILE = CollectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = at.yeoman.mutabor.SwiftPersistentCollectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		96040E182042AC0C006832E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 327TCYU8D4;
+				INFOPLIST_FILE = CollectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = at.yeoman.mutabor.SwiftPersistentCollectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -272,6 +503,15 @@
 			buildConfigurations = (
 				96040DAD2042A0A0006832E0 /* Debug */,
 				96040DAE2042A0A0006832E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96040E162042AC0C006832E0 /* Build configuration list for PBXNativeTarget "SwiftPersistentCollectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96040E172042AC0C006832E0 /* Debug */,
+				96040E182042AC0C006832E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
