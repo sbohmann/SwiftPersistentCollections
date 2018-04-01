@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96040DE62042A239006832E0"
+               BlueprintIdentifier = "96040E0D2042AC0C006832E0"
                BuildableName = "SwiftPersistentCollectionTests.xctest"
                BlueprintName = "SwiftPersistentCollectionTests"
                ReferencedContainer = "container:SwiftPersistentCollections.xcodeproj">
@@ -48,7 +48,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96040DE62042A239006832E0"
+               BlueprintIdentifier = "96040E0D2042AC0C006832E0"
                BuildableName = "SwiftPersistentCollectionTests.xctest"
                BlueprintName = "SwiftPersistentCollectionTests"
                ReferencedContainer = "container:SwiftPersistentCollections.xcodeproj">

@@ -1,9 +1,8 @@
-final class PVTreeNode : PVNode {
-    let level: Int
-    var nodes: [PVNode]
+final class PVTreeNode<E> : PVNode<E> {
+    var nodes: [PVNode<E>]
     var size: Int
     
-    private init(level: Int, nodes: [PVNode], size: Int) {
+    private init(level: Int, nodes: [PVNode<E>], size: Int) {
         self.nodes = nodes
         
         if nodes.count == 0 {
@@ -12,10 +11,10 @@ final class PVTreeNode : PVNode {
         
         self.size = size
         
-        self.level = level
+        super.init(level: level)
     }
     
-    init(level: Int, subNode: PVNode) {
+    init(level: Int, subNode: PVNode<E>) {
         let nodes = [subNode]
         
         self.nodes = nodes
@@ -25,10 +24,10 @@ final class PVTreeNode : PVNode {
             fatalError("Attempt to create an empty TreeNode")
         }
         
-        self.level = level
+        super.init(level: level)
     }
     
-    init(lhs: PVNode, rhs: Any) {
+    init(lhs: PVNode<E>, rhs: E) {
         if lhs.isFull() == false {
             fatalError("lhs node is not full")
         }
@@ -42,10 +41,10 @@ final class PVTreeNode : PVNode {
             fatalError("Attempt to create an empty TreeNode")
         }
         
-        self.level = lhs.level + 1
+        super.init(level: lhs.level + 1)
     }
     
-    init(lhs: PVNode, rhs: PVValueNode) {
+    init(lhs: PVNode<E>, rhs: PVValueNode<E>) {
         if lhs.isFull() == false {
             fatalError("lhs node is not full")
         }
@@ -59,10 +58,10 @@ final class PVTreeNode : PVNode {
             fatalError("Attempt to create an empty TreeNode")
         }
         
-        self.level = lhs.level + 1
+        super.init(level: lhs.level + 1)
     }
     
-    func get(idx: Int) -> Any {
+    override func get(idx: Int) -> E {
         var idx = idx
         
         if idx >= 0 && idx < size {
@@ -78,7 +77,7 @@ final class PVTreeNode : PVNode {
         fatalError("Logical error in TreeNode")
     }
     
-    func with(idx: Int, value: Any) -> PVTreeNode {
+    override func with(idx: Int, value: E) -> PVTreeNode {
         var idx = idx
         
         if idx >= 0 && idx < size {
@@ -104,7 +103,7 @@ final class PVTreeNode : PVNode {
         fatalError("Logical error in TreeNode")
     }
     
-    func set(idx: Int, value: Any) {
+    override func set(idx: Int, value: E) {
         var idx = idx
         
         if idx >= 0 && idx < size {
@@ -134,15 +133,15 @@ final class PVTreeNode : PVNode {
         fatalError("Logical error in TreeNode")
     }
     
-    func getSize() -> Int {
+    override func getSize() -> Int {
         return size
     }
     
-    func isFull() -> Bool {
+    override func isFull() -> Bool {
         return nodes.count == maximumSubNodes && nodes[nodes.count - 1].isFull()
     }
     
-    func plus(value: Any) -> PVNode? {
+    override func plus(value: E) -> PVNode<E>? {
         // attempt to replace the last sub-node
         if nodes.count > 0 {
             let lastSubnode = nodes[nodes.count - 1]
@@ -169,7 +168,7 @@ final class PVTreeNode : PVNode {
         return nil
     }
     
-    func add(value: Any) -> Bool {
+    override func add(value: E) -> Bool {
         // attempt to replace the last sub-node
         if nodes.count > 0 {
             let unshared = isKnownUniquelyReferenced(&nodes[nodes.count - 1])
@@ -206,7 +205,7 @@ final class PVTreeNode : PVNode {
         return false
     }
     
-    func plus(valueNode: PVValueNode) -> PVTreeNode? {
+    override func plus(valueNode: PVValueNode<E>) -> PVTreeNode? {
         // attempt to replace the last sub-node
         if nodes.count > 0 {
             let lastSubnode = nodes[nodes.count - 1]
@@ -234,7 +233,7 @@ final class PVTreeNode : PVNode {
         return nil
     }
     
-    func withoutLast() -> PVTreeNode? {
+    override func withoutLast() -> PVTreeNode? {
         let lastSubnode = nodes[nodes.count - 1]
         
         let lastSubnodeReplacement = lastSubnode.withoutLast()
@@ -264,7 +263,7 @@ final class PVTreeNode : PVNode {
         }
     }
     
-    func removeLast() -> Bool {
+    override func removeLast() -> Bool {
         let unshared = isKnownUniquelyReferenced(&nodes[nodes.count - 1])
         
         let lastSubnode = nodes[nodes.count - 1]
@@ -307,5 +306,26 @@ final class PVTreeNode : PVNode {
                 }
             }
         }
+    }
+}
+
+extension PVTreeNode where E : Equatable {
+    static func == (lhs: PVTreeNode<E>, rhs: PVTreeNode<E>) -> Bool {
+        // TODO replace with lhs.nodes == rhs.nodes once possible
+        
+        let size = lhs.nodes.count
+        if (rhs.nodes.count != size) {
+            return false
+        }
+        for index in 0 ..< size {
+            if (lhs.nodes[index] != rhs.nodes[index]) {
+                return false
+            }
+        }
+        return true
+    }
+    
+    static func != (lhs: PVTreeNode<E>, rhs: PVTreeNode<E>) -> Bool {
+        return !(lhs == rhs)
     }
 }
